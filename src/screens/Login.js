@@ -33,7 +33,7 @@ class Login extends Component {
                 console.log(test);
                 loginTrue();
             } else {
-                console.log("INVALID PASSWORD");
+                console.log("INVALID PASSWORD;theek daal");
             }
         } else {
             console.log("INVALID USERNAME");
