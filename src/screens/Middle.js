@@ -1,28 +1,28 @@
 import React, { Component } from 'react';
 // import * as firebase from 'firebase';
 
-class Header extends Component {
+class Middle extends Component {
 
     renderData = () => {
         return(
-            <p>HEADER DATA</p>
+            <p>MIDDLE DATA</p>
         )
     }
 
-    renderHeader = () => {
+    renderMiddle = () => {
         return (
-            <h1>HEADER</h1>
+            <h1>MIDDLE</h1>
         )
     }
 
     render() {
         return (
             <React.Fragment>
-                {this.renderHeader()}
+                {this.renderMiddle()}
                 {this.renderData()}
             </React.Fragment>
         )
     }
 }
 
-export default Header;
+export default Middle;

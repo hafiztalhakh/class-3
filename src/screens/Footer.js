@@ -5,20 +5,20 @@ class Header extends Component {
 
     renderData = () => {
         return(
-            <p>HEADER DATA</p>
+            <p>FOOTER DATA</p>
         )
     }
 
-    renderHeader = () => {
+    renderFooter = () => {
         return (
-            <h1>HEADER</h1>
+            <h1>FOOTER</h1>
         )
     }
 
     render() {
         return (
             <React.Fragment>
-                {this.renderHeader()}
+                {this.renderFooter()}
                 {this.renderData()}
             </React.Fragment>
         )

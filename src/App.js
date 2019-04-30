@@ -1,36 +1,35 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 // import * as firebase from 'firebase';
+
+//Componenets
+import Header from './screens/Header';
+import Middle from './screens/Middle';
+import Footer from './screens/Footer';
+import Login from './screens/Login'
 
 class App extends Component {
 
-  printName = () => {
-    console.log("Hamza");
-  }
+  state = ({
+    showLogin: true,
+    showMiddle: false,
+  })
 
-  renderHeader = () => {
-    return(
-      <h1>HEADER</h1>
-    )
-  }
-
-  renderFooter = () => {
-    return (
-      <h1>FOOTER</h1>
-    )
-  }
-
-  renderMiddle = () => {
-    return(
-      <h1>MIDDLE</h1>
-    )
+  loginTrue = () => {
+    this.setState({
+      showLogin: false,
+      showMiddle: true,
+    })
   }
 
   render() {
+    const { showLogin, showMiddle } = this.state;
+
     return (
       <React.Fragment>
-        {this.renderHeader()}
-        {this.renderMiddle()}
-        {this.renderFooter()}
+        <Header />
+        {showMiddle && <Middle />}
+        {showLogin && <Login loginTrue={this.loginTrue} test={"THIS IS A TEST STRING"} />}
+        <Footer />
         <button onClick={this.printName}>PRINT</button>
       </React.Fragment>
     )
